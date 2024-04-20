@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "title": "Game Config",
+  "description": "General game configuration",
+  "type": "object",
+  "properties": {
+    "initial_scene": {
+      "description": "The name of the initial scene to load",
+      "type": "string"
+    },
+    "world_name": {
+      "description": "The name of the LDtk world to load in the resources/worlds folder, if any",
+      "type": "string"
+    },
+    "game_title": {
+      "description": "The title of the game window, if any",
+      "type": "string"
+    },
+    "default_tile_friction": {
+      "description": "The default friction of auto-generated tiles. Defaults to 0.3",
+      "type": "number",
+      "minimum": 0
+    },
+    "default_tile_bounciness": {
+      "description": "The default bounciness of auto-generated tiles. Defaults to 0.3",
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "required": ["initial_scene"]
+}

@@ -1,0 +1,59 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "title": "Rendering Config",
+    "description": "Rendering configuration",
+    "type": "object",
+    "properties": {
+        "x_resolution": {
+            "description": "The width of the game window. Defaults to 640",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "y_resolution": {
+            "description": "The height of the game window. Defaults to 360",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "clear_color_r": {
+            "description": "The red component of the renderer clear color. Defaults to 255",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 255
+        },
+        "clear_color_g": {
+            "description": "The green component of the renderer clear color. Defaults to 255",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 255
+        },
+        "clear_color_b": {
+            "description": "The blue component of the renderer clear color. Defaults to 255",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 255
+        },
+        "zoom_factor": {
+            "description": "The initial camera zoom factor. Defaults to 1",
+            "type": "number",
+            "exclusiveMinimum": 0
+        },
+        "pixels_per_meter": {
+            "description": "The number of pixels per scene unit. Defaults to 32",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "initial_camera_x": {
+            "description": "The initial camera x position in scene units. Defaults to x_resolution / 2f / pixels_per_meter",
+            "type": "number"
+        },
+        "initial_camera_y": {
+            "description": "The initial camera y position in scene units. Defaults to y_resolution / 2f / pixels_per_meter",
+            "type": "number"
+        },
+        "max_frame_rate": {
+            "description": "The maximum allowed framerate (approximately). If <= 0, framerate is uncapped. Defaults to 60",
+            "type": "integer"
+        }
+    },
+    "required": []
+}
